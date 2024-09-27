@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Only</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            perspective: 1000px;
+            background-color: #211a1a; /* Match background color */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            justify-content: center; /* Center the video and button */
+            align-items: center;
+            width: 25%;
+            height: 50%;
+            padding: 20px;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        video {
+            width: 20vw; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            border: 3px solid #181313; /* Light border */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 20px; /* Space between video and button */
+        }
+
+        .next-button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Font size */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        .next-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Video in the Center -->
+        <video controls>
+            <source src="darshan.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Next Button -->
+        <a href="final.html">
+            <button class="next-button">Next</button>
+        </a>
+    </div>
+</body>
+</html>
