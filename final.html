@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Align items at the bottom */
+            height: 100vh;
+            margin: 0;
+            background-color: #211a1a;
+            overflow: hidden; /* Hide scrollbar */
+            position: relative; /* Needed for absolute positioning */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between; /* Space images evenly */
+            align-items: flex-end; /* Align images at the bottom */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            padding: 20px;
+            position: relative; /* Position for the heading */
+        }
+
+        img {
+            width: 20%; /* Each image takes up 20% of the container width */
+            height: auto; /* Maintain aspect ratio */
+            opacity: 0; /* Start hidden */
+            transform: translateY(100px); /* Start from below */
+            animation: slideIn 0.5s forwards; /* Animation */
+        }
+
+        /* Animation to slide in images */
+        @keyframes slideIn {
+            to {
+                opacity: 1; /* Fade in */
+                transform: translateY(0); /* Move to original position */
+            }
+        }
+
+        /* Delay for each image */
+        img:nth-child(1) {
+            animation-delay: 0s;  /* First image slides in immediately */
+        }
+        img:nth-child(2) {
+            animation-delay: 0.5s; /* Second image slides in after 0.5 seconds */
+        }
+        img:nth-child(3) {
+            animation-delay: 1s;   /* Third image slides in after 1 second */
+        }
+        img:nth-child(4) {
+            animation-delay: 1.5s; /* Fourth image slides in after 1.5 seconds */
+        }
+        img:nth-child(5) {
+            animation-delay: 2s;   /* Fifth image slides in after 2 seconds */
+        }
+
+        /* Heading styles */
+        .heading {
+            position: absolute; /* Position it at the top-center */
+            top: 20px; /* Distance from top */
+            left: 50%;
+            transform: translateX(-50%); /* Center it horizontally */
+            color: white; /* Text color */
+            font-size: 3em; /* Heading size */
+            opacity: 0; /* Start hidden */
+            animation: fadeIn 0.5s forwards; /* Fade in animation */
+            animation-delay: 2.5s; /* Delay until images finish */
+        }
+
+        /* Animation for heading to fade in */
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Fade in */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="pr.jpg" alt="Picture 1">
+        <img src="cr.jpg" alt="Picture 2">
+        <img src="ss.jpg" alt="Picture 3">
+        <img src="nm.jpg" alt="Picture 4">
+        <img src="rr.jpg" alt="Picture 5"> <!-- Add your new image here -->
+    </div>
+    <div class="heading">JALGAAR TRIBE</div>
+</body>
+</html>
