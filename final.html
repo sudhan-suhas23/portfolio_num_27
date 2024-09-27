@@ -82,6 +82,7 @@
     </style>
 </head>
 <body>
+    <audio id="backgroundAudio" src="merged audio.mp3" type="audio/mp4"></audio>
     <div class="image-container">
         <img src="pr.jpg" alt="Picture 1">
         <img src="cr.jpg" alt="Picture 2">
@@ -90,5 +91,13 @@
         <img src="rr.jpg" alt="Picture 5"> <!-- Add your new image here -->
     </div>
     <div class="heading">JALGAAR TRIBE</div>
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('backgroundAudio');
+            audio.play().catch(function(error) {
+                console.log('Autoplay was prevented:', error);
+            });
+        });
+    </script>
 </body>
 </html>
